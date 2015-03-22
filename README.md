@@ -1,15 +1,19 @@
-# Folding@Home
+# Folding@Home (Ubuntu / Debian)
 
-## Automatic installation (Ubuntu / Debian)
+Simple instructions for getting Holding@Home running on your linux machine. Perfect to setup on your edge/test/staging machines.
 
-Run: 
+## Automatic install
+
+**Warning:** This will setup a cron job, that will run the folding client on non-work hours (see [install script](install.bash)).
+
+Run:
 ```bash
 git clone git@github.com:buren/folding-at-home
 bash folding-at-home/install.bash
 ```
 and just follow the instructions.
 
-## Manual installation instructions (Ubuntu / Debian)
+## Manual install
 
 1. Download packages
   ```bash
@@ -29,6 +33,19 @@ and just follow the instructions.
   ```bash
   sudo vim /etc/fahclient/config.xml
   ```
+  Options:
+  ```xml
+    <!-- CPU usage level (off/idle/light/medium/full) -->
+    <power v='full'/>
+
+    <!-- User information -->
+    <user v='YOUR_USERNAME'/>
+    <team v='YOUR_TEAM_NUM' />
+
+    <!-- Web client -->
+    <allow v='IP_ADDRESS_YOU_WILL_CONNECT_FROM' />
+  ```
+
   then restart FAHClient
   ```bash
   sudo /etc/init.d/FAHClient restart
