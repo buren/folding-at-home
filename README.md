@@ -18,15 +18,11 @@ and just follow the instructions.
 1. Download packages
   ```bash
   wget --no-check-certificate https://fah.stanford.edu/file-releases/public/release/fahclient/debian-testing-64bit/v7.4/fahclient_7.4.4_amd64.deb
-  wget --no-check-certificate https://fah.stanford.edu/file-releases/public/release/fahcontrol/debian-testing-64bit/v7.4/fahcontrol_7.4.4-1_all.deb
-  wget --no-check-certificate https://fah.stanford.edu/file-releases/public/release/fahviewer/debian-testing-64bit/v7.4/fahviewer_7.4.4_amd64.deb
   ```
 
 2. Install packages
   ```bash
   sudo dpkg -i --force-depends fahclient_7.4.4_amd64.deb
-  sudo dpkg -i --force-depends fahcontrol_7.4.4-1_all.deb
-  sudo dpkg -i --force-depends fahviewer_7.4.4_amd64.deb
   ```
 
 3. Configure (optional)

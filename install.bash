@@ -1,18 +1,14 @@
 download_pkgs() {
   local base_url=https://fah.stanford.edu/file-releases/public/release
-  echo 'Downloading all FAH packages'
+  echo 'Downloading all FAH client'
   wget --no-check-certificate $base_url/fahclient/debian-testing-64bit/v7.4/fahclient_7.4.4_amd64.deb
-  wget --no-check-certificate $base_url/fahcontrol/debian-testing-64bit/v7.4/fahcontrol_7.4.4-1_all.deb
-  wget --no-check-certificate $base_url/fahviewer/debian-testing-64bit/v7.4/fahviewer_7.4.4_amd64.deb
-  echo 'Downloaded all FAH packages'
+  echo 'Downloaded all FAH client'
 }
 
 install_pkgs() {
-  echo 'Installing all FAH packages'
+  echo 'Installing all FAH client'
   sudo dpkg -i --force-depends fahclient_7.4.4_amd64.deb
-  sudo dpkg -i --force-depends fahcontrol_7.4.4-1_all.deb
-  sudo dpkg -i --force-depends fahviewer_7.4.4_amd64.deb
-  echo 'Installed all FAH packages'
+  echo 'Installed all FAH client'
 }
 
 set_run_schedule() {
